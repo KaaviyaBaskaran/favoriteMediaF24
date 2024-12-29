@@ -1,0 +1,645 @@
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: -10000px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("../images/lake-6260668_1920.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.text-box {
+    background-color: rgba(250, 252, 255, 0.5);
+    padding: 15px 25px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(182, 182, 182, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+a {
+    color: #355e3b;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+header h1 {
+    color: #233b27;
+}
+
+header nav {
+    .nav-button {
+        background-color: #D1EBFF;
+        color: #1a6d9d;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .nav-button:hover {
+        background-color: #1a6d9d;
+        color: #D1EBFF;
+    }
+
+    .nav-button:focus {
+        outline: none;
+        background-color: #1a6d9d;
+        color: #D1EBFF;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    }
+}
+
+header h2 {
+    color: #2b4930;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #355e3b;
+    margin-top: 0px;
+    text-align: left;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-overlay.active .lightbox-content {
+    transform: scale(1);
+}
+
+.text-box-media {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(250, 252, 255, 0.8);
+    margin: 20px 0;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    cursor: pointer;
+    position: relative;
+}
+
+.text-box-media:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-box-media img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+    flex-shrink: 0;
+}
+
+.text-box-media div {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.text-box-media h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #233b27;
+}
+
+.text-box-media h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: #1d3121;
+}
+
+.text-box-media p {
+    margin: 0;
+    font-size: 1rem;
+    color: #355e3b;
+}
+
+.text-box-media .trailer-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ee0000;
+    color: white;
+    border: black 1px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.text-box-media .trailer-button i {
+    margin-right: 8px;
+}
+
+.text-box-media .trailer-button:hover {
+    background-color: #FF5555;
+}
+
+.text-box-media iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#scrollTopBtn:focus {
+    outline: 2px solid #fff;
+}
+
+#scrollTopBtn:hover {
+    background-color: #333;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: -10000px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 4rem;
+    background-color: #000000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer h3 {
+    color: #fff5e1;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .text-box {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 80px;
+    }
+
+    header h2 {
+        font-size: 60px;
+        color: #2b4930;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    header p {
+        font-size: 20px;
+        color: #355e3b;
+        margin-top: 0;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header nav .nav-button {
+        font-size: 20px;
+        padding: 18px 35px;
+        width: 48%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .text-box-media {
+        flex-direction: column;
+    }
+
+    .text-box-media img {
+        width: 50%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .text-box-media div {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .text-box-media h3,
+    .text-box-media p {
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        height: 5rem;
+        background-color: #000000;
+        text-align: center;
+        position: relative;
+    }
+
+    footer h3 {
+        font-size: 18px;
+        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .text-box {
+        padding: 12px 15px;
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 80px;
+    }
+
+    header h2 {
+        font-size: 60px;
+        color: #2b4930;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    header p {
+        font-size: 20px;
+        color: #355e3b;
+        margin-top: 0;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header nav .nav-button {
+        font-size: 20px;
+        padding: 18px 35px;
+        width: 48%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .text-box-media {
+        flex-direction: column;
+    }
+
+    .text-box-media img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .text-box-media div {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .text-box-media h3,
+    .text-box-media p {
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        height: 5rem;
+        background-color: #000000;
+        text-align: center;
+        position: relative;
+    }
+
+    footer h3 {
+        font-size: 18px;
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000d27;
+        background-image: url("../images/planet-1702788_1920.jpg");
+    }
+
+    header h1 {
+        color: #b6c2cf;
+    }
+
+    header nav .nav-button {
+        background-color: #596566;
+        color: #fefaf4;
+    }
+
+    header nav .nav-button:hover {
+        background-color: #fefaf4;
+        color: #596566;
+    }
+
+    header nav .nav-button:focus {
+        background-color: #fefaf4;
+        color: #596566;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    header h2 {
+        color: #afbfcf;
+        text-align: left;
+    }
+
+    header p {
+        color: #afbfcf;
+        text-align: left;
+    }
+
+    .text-box {
+        background-color: rgba(0, 9, 40, 0.5);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+        color: #97a5c2;
+    }
+
+    main .text-box-media {
+        background-color: rgba(0, 9, 40, 0.6);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-box-media h3 {
+        color: #afbfcf;
+    }
+
+    .text-box-media h4 {
+        color: #9baab9;
+    }
+
+    .text-box-media p {
+        color: #8694b1;
+    }
+
+}
+
+@media (prefers-contrast: more) {
+    body {
+        background-color: #dbe0e3;
+        background-image: url("../images/forest-7774205_1920.jpg");
+    }
+
+    header h1 {
+        color: #000000;
+    }
+
+    header nav .nav-button {
+        background-color: #000000;
+        color: #fefaf4;
+    }
+
+    header nav .nav-button:hover {
+        background-color: #fefaf4;
+        color: #000000;
+    }
+
+    header nav .nav-button:focus {
+        background-color: #fefaf4;
+        color: #000000;
+        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    header h2 {
+        color: #000000;
+        text-align: left;
+    }
+
+    header p {
+        color: #000000;
+        text-align: left;
+    }
+
+    .text-box {
+        background-color: rgba(219, 224, 227, 0.5);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+        color: #111111;
+    }
+
+    main .text-box-media {
+        background-color: rgba(219, 224, 227, 0.6);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-box-media h3 {
+        color: #000000;
+        ;
+    }
+
+    .text-box-media p {
+        color: #000000;
+    }
+
+    #scrollTopBtn {
+        background-color: white;
+        color: black;
+    }
+
+    #scrollTopBtn:focus {
+        outline: 2px solid #000000;
+        color: white;
+    }
+
+    #scrollTopBtn:hover {
+        background-color: #000000;
+        color: white;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #1a191f;
+            background-image: url("../images/background-1939128_1280.jpg");
+        }
+
+        header h1 {
+            color: #fefaf4;
+        }
+
+        header nav .nav-button {
+            background-color: #fefaf4;
+            color: #000000;
+        }
+
+        header nav .nav-button:hover {
+            background-color: #000000;
+            color: #fefaf4;
+        }
+
+        header nav .nav-button:focus {
+            background-color: #000000;
+            color: #fefaf4;
+            box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        header h2 {
+            color: #fefaf4;
+            text-align: left;
+        }
+
+        header p {
+            color: #fefaf4;
+            text-align: left;
+        }
+
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            color: #eeeeee;
+        }
+
+        main .text-box-media {
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-box-media h3 {
+            color: #fefaf4;
+        }
+
+        .text-box-media p {
+            color: #fefaf4;
+        }
+
+        #scrollTopBtn {
+            background-color: white;
+            color: black;
+        }
+
+        #scrollTopBtn:focus {
+            outline: 2px solid #000000;
+            color: white;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #000000;
+            color: white;
+        }
+    }
+}
