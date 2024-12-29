@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="reset" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8df9947036.js" crossorigin="anonymous"></script>
+    <style>
+        .skip-link {
+            position: absolute;
+            top: 0;
+            left: -10000px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-box">My Favorite Movies <i class="fa-solid fa-film"></i></h1>
+
+        <a href="#main" class="skip-link" aria-label="Skip to main content">Skip to Main Content</a>
+
+        <nav>
+            <button class="nav-button" onclick="window.location.href='index.html';">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </button>
+            <button class="nav-button" onclick="window.location.href='books.html';">
+                <i class="fa-solid fa-book"></i>
+                Books
+            </button>
+            <button class="nav-button" onclick="window.location.href='shows.html';">
+                <i class="fa-solid fa-tv"></i>
+                Shows
+            </button>
+            <button class="nav-button" onclick="window.location.href='music.html';">
+                <i class="fa-solid fa-music"></i>
+                Music
+            </button>
+        </nav>
+        <h2 class="text-box">Welcome to my favorite movies!</h2>
+        <p class="text-box">
+            Here are some of my favorite movies. These movies are movies that I watched recently and very much enjoyed.
+            I recommend watching these movies! I will include a short summary of each movie as well as link to a trailer
+            to each movie.
+        </p>
+    </header>
+
+    <main id="main">
+        <div class="text-box-media">
+            <img src="images/movies/Bahubali.jpg" alt="Bahubali Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/VdafjyFK3ko?si=L1SeIEwWYowmg8lM', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Bahubali The Beginning - 2015</h3>
+                <p>This movie was one of the biggest, if not the biggest, Indian movies ever made. This
+                    movie was officially released in 4 different languages and was an expierence to watch. It was one of
+                    the first indian movies that felt comparable to a Hollywood movie that I have seen in awhile. And
+                    the story and twists of the movie just keeps you watching. This movie had a cast of very strong
+                    actors and the settings where breath taking and only sucked you in further into the movie. This
+                    movie is only the first of the 2 part series.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt2631186/plotsummary/">imdb</a>:
+                    <br>
+                    A child from the Mahishmati kingdom is raised by tribal people and one day learns about his royal
+                    heritage, his father's bravery in battle and a mission to overthrow the incumbent ruler.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/Chandramukhi.jpg" alt="Chandramukhi Movie Poster">
+            <button class="trailer-button" onclick="window.open('https://www.imdb.com/title/tt0449869/', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Chandramukhi - 2005</h3>
+                <p>This movie came out almost 2 decades ago, yet it is one of my all time favorite movies. I did not
+                    fully watch this movie until I was 13 or so, and it instatnly become one of my favorites. This movie
+                    is not beloved by me because of its horror elements, but rather its comedy. The plot is pretty
+                    standard, and the horror effects, is not very scary, but the comedy carries this entire movie and
+                    will keep you laughing at the same jokes even decades later.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt0449869/">imdb</a>:
+                    <br>
+                    Creepy happenings in an abandoned mansion are attributed to the ghost of an ancient courtesan, back
+                    for revenge.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/DeadpoolAndWolvarine.jpg" alt="Deadpool & Wolvarine Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/73_1biulkYk?si=GYD53x2D6dq-yWmd', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Deadpool & Wolvarine - 2024</h3>
+                <p>This movie is the most recent movie I have watched. Although this is not my favorite
+                    movie, not even my favorite Deadpool movie, but it is a fun watch nonetheless.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt6263850/?ref_=fn_al_tt_1">imdb</a>:
+                    <br>
+                    Deadpool is offered a place in the Marvel Cinematic Universe by the Time Variance Authority, but
+                    instead recruits a variant of Wolverine to save his universe from extinction.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/DetectiveChinatown.jpg" alt="Detective Chinatown Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/XDWHxtGMgGw?si=fjh_D93yuTZSEGXS', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Detective Chinatown - 2015</h3>
+                <p>This is a movie that I thoroughly enjoyed and highly recommend watching. This is a comedy action film
+                    that is filled with a lot of hilarious gags and a very captivating mystery at the center of it.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a
+                        href="https://www.imdb.com/title/tt5290882/?ref_=nv_sr_srsg_3_tt_8_nm_0_in_0_q_Detective%2520Chinatown">imdb</a>:
+                    <br>
+                    After being rejected from the police academy, a mild-mannered young man travels to Bangkok where he
+                    and an energetic distant relative must solve a murder case.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/JilJungJuk.jpg" alt="Jil Jung Juk Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/pXPoF1Uu00E?si=sHJMMa5C9IRpTMZf', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Jil Jung Juk - 2016</h3>
+                <p>This is another really funny movie, in which 3 men go through twists and turns in order to smuggle
+                    drugs without getting caught.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt5459644/">imdb</a>:
+                    <br>
+                    In 2020, three young blokes, Jil, Jung and Juck, with nothing in common between them, are assigned
+                    the task of transporting an Ambassador car coated with cocaine-paint by the dreaded drug lord,
+                    Dheivanayagam. Along the way, they encounter Narasimhan with an almost identical car, who makes
+                    small talk and tries to gel with the trio. After a night of drinking the trio escape the pub without
+                    his knowledge. But only later do they realize that in a drunken stupor, they have taken Narasimhan's
+                    car and not their own.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/KolamavuKokila.jpg" alt="Kolamavu Kokila Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/D1BRfZjnhec?si=7-5Xi7UmbWnT1fZs', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Kolamavu Kokila - 2018</h3>
+                <p>This is a movie that I was only able to watch recently despite it being out for awhile. This is
+                    because this movie is really hard to find for some reason. If you are able to I would highly
+                    recommend watching this movie. IT has very good music and is another funny movie. It also shows a
+                    female character as being mentally strong and very smart. It overall is just an amazong watch.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt7986222/?ref_=fn_al_tt_1">imdb</a>:
+                    <br>
+                    To save her mother from terminal cancer, a young girl gets herself involved with the drug
+                    trafficking mafia active in the small towns of Tamil Nadu.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/SpongebobMovie.jpg" alt="The Spongebob Squarepants Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/47ceXAEr2Oo?si=mBEM4zFeuS93BxLr', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>The Spongebob Squarepants Movie - 2004</h3>
+                <p>This movie is simply a fun watch and just a great movie to watch to unwind.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt0345950/?ref_=fn_al_tt_1">imdb</a>:
+                    <br>
+                    After King Neptune's crown is stolen, SpongeBob and Patrick go on a quest in 6 days to retrieve his
+                    crown. On the way SpongeBob and Patrick defeat many evildoers using their brains and bronzes. While
+                    this is happening someone is taking over Bikini Bottom and SpongeBob and Patrick must defeat this
+                    mastermind.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/TheBobsBurgersMovie.jpg" alt="The Bob's Burgers Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/hbGXqUumtqg?si=YdAZWRQwidV66Jv6', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>The Bob's Burgers Movie - 2022</h3>
+                <p>If ypou like Bob's Burgers, you'll like this movie. The animation quality is amazing, and there is
+                    also a very intriguing mystery that takes place.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt7466442/?ref_=fn_al_tt_1">imdb</a>:
+                    <br>
+                    The story begins when a ruptured water main creates an enormous sinkhole right in front of Bob's
+                    Burgers, blocking the entrance indefinitely and ruining the Belchers' plans for a successful summer.
+                    While Bob and Linda struggle to keep the business afloat, the kids try to solve a mystery that could
+                    save their family's restaurant. As the dangers mount, these underdogs help each other find hope and
+                    fight to get back behind the counter, where they belong.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/TheCroods.jpg" alt="The Croods Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/4fVCKy69zUY?si=Hpfq_-vbj-LzPFJZ', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>The Croods - 2013</h3>
+                <p>This has to be one of my favorite DreamWorks films. It is funny, wholesome, colorful, and creative. I
+                    rewatched this movie many many times, and it continues to be an enjoyable movie, and one that I
+                    never get bored of.</p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt0481499/?ref_=fn_al_tt_1">imdb</a>:
+                    <br>
+                    "The Croods" are an eccentric family of cavemen, who survive the harsh terrain by living accordingly
+                    to a strict set of rules. But when their home is destroyed in the wake of an impending disaster
+                    known as "The End", they are forced to leave their home of shelter and security, and into the
+                    wilderness of the unknown to find a new home
+                </p>
+            </div>
+        </div>
+
+        <div class="text-box-media">
+            <img src="images/movies/VaruthapadathaValibarSangam.jpg" alt="Varuthapadatha Valibar Sangam Movie Poster">
+            <button class="trailer-button"
+                onclick="window.open('https://youtu.be/ky4Yy8_KbZs?si=Q4wllxZKFtSuxZIT', '_blank');">
+                <i class="fa-solid fa-play"></i>
+                Trailer
+            </button>
+            <div>
+                <h3>Varuthapadatha Valibar Sangam - 2013</h3>
+                <p>This is a halirous movie that is just a slice of life comedy, and is great when you want to just
+                    watch a light hearted movie. </p>
+                <br>
+                <p>
+                    Summary from
+                    <a href="https://www.imdb.com/title/tt3215258/?ref_=fn_al_tt_1">imdb</a>:
+                    <br>
+                    Set in a village called Silukkuvarpatti in Tamil Nadu, the story is about a group of wastrels lead
+                    by Bosepandi (Sivakarthikeyan) and his loyal sidekick Soori. Bosepandi is attracted to Kalyani
+                    (Bindu Madhavi), a school teacher. He seeks the help of Lathapandi (Sri Divya), a class 12 student
+                    in the same school, to deliver love letters from him to Kalyani. As time goes by, Kalyani gets
+                    married to someone, leaving Bosepandi heartbroken. Meanwhile, Lathapandi's father arranges for her
+                    wedding, but she is still a minor. When Bosepandi comes to learn about the marriage, he seeks the
+                    help of police to stop the teen marriage. When the wedding is called off, a relieved Latha falls for
+                    Bose. What happens between Latha and Bose? This forms the rest of the story of the film.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top of the page">
+        <i class="fa-solid fa-arrow-up"></i>
+        Top
+    </button>
+
+    <footer>
+        <h3>Thanks for visiting!</h3>
+    </footer>
+
+    <script src="js/function.js"></script>
+</body>
+
+</html>
